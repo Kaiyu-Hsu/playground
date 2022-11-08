@@ -18,9 +18,10 @@ export default {
   },
   data() {
     return {
-      isCollapse: true,
+      //   isCollapse: true,
     };
   },
+  methods: {},
 };
 </script>
 

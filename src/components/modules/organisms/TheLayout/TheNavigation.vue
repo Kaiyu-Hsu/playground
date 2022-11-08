@@ -4,9 +4,9 @@
     <el-menu
       class="el-menu-vertical-demo"
       :default-active="activeIndex"
-      @open="handleOpen"
-      @close="handleClose"
-      @select="handleSelect"
+      @open.native="handleOpen"
+      @close.native="handleClose"
+      @select.native="handleSelect"
     >
       <el-submenu index="1">
         <template slot="title">
@@ -36,21 +36,23 @@ export default {
   },
   methods: {
     handleOpen(key, keyPath) {
-      console.log(key, keyPath);
+      console.log("handleOpen", key, keyPath);
+      //   this.isCollapse = false;
     },
     handleClose(key, keyPath) {
-      console.log(key, keyPath);
+      console.log("handleClose", key, keyPath);
+      //   this.isCollapse = true;
     },
     handleSelect(key, keyPath) {
-      console.log(key, keyPath);
+      console.log("handleSelect", key, keyPath);
     },
   },
 };
 </script>
 
 <style lang="scss" scoped>
-// .el-menu-vertical-demo:not(.el-menu--collapse) {
-//   width: 200px;
-//   min-height: 400px;
-// }
+.el-menu-vertical-demo:not(.el-menu--collapse) {
+  width: 200px;
+  min-height: 400px;
+}
 </style>
