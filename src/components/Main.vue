@@ -1,14 +1,10 @@
 <template>
   <div class="main">
-    <el-popover
-      placement="top-start"
-      title="标题"
-      width="200"
-      trigger="hover"
-      content="內容"
-    >
-      <el-button id="myButton" slot="reference">hover 激活</el-button>
-    </el-popover>
+    <h3>歡迎來到 Cindy 遊樂園</h3>
+    <img
+      src="https://img-eshop.cdn.nintendo.net/i/c69edb66ffed03152357cd24cacf10ff725c2a540bec59895e899b0d69b96b63.jpg?w=1000"
+      alt="歡迎來到 Cindy 遊樂園"
+    />
   </div>
 </template>
 
@@ -16,7 +12,9 @@
 export default {
   name: "Main",
   props: {},
-  data() {},
+  data() {
+    return {};
+  },
 };
 </script>
 
