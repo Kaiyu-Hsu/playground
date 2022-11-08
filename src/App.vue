@@ -1,17 +1,29 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/example">實驗室</router-link>
-    </div>
-    <router-view />
+    <el-container>
+      <!-- :width="isCollapse ? '64px' : '200px'" -->
+      <el-aside>
+        <!-- :isCollapse="isCollapse" -->
+        <TheNavigation />
+      </el-aside>
+      <el-main>
+        <router-view />
+      </el-main>
+    </el-container>
   </div>
 </template>
 
 <script>
+import TheNavigation from "../src/components/modules/organisms/TheLayout/TheNavigation.vue";
+
 export default {
+  components: {
+    TheNavigation,
+  },
   data() {
-    return {};
+    return {
+      // isCollapse: true,
+    };
   },
   methods: {},
 };
@@ -24,6 +36,15 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+
+  .el-container,
+  .el-aside {
+    height: 100%;
+  }
+
+  .el-aside {
+    overflow: hidden;
+  }
 }
 
 #nav {

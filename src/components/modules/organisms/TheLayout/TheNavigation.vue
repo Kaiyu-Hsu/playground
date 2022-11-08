@@ -4,20 +4,27 @@
     <el-menu
       class="el-menu-vertical-demo"
       :default-active="activeIndex"
+      router
       @open.native="handleOpen"
       @close.native="handleClose"
       @select.native="handleSelect"
     >
-      <el-submenu index="1">
+      <el-menu-item index="/">
+        <template slot="title">
+          <i class="el-icon-s-home"></i>
+          <span slot="title">Home</span>
+        </template></el-menu-item
+      >
+      <el-submenu index="2">
         <template slot="title">
           <i class="el-icon-menu"></i>
           <span slot="title">小工具</span>
         </template>
         <el-menu-item-group>
-          <el-menu-item index="1-1"
+          <el-menu-item index="2-1"
             >el-tooltip + el-cascader-panel</el-menu-item
           >
-          <el-menu-item index="1-2">element + vue-tippy</el-menu-item>
+          <el-menu-item index="/vue-tipppy">element + vue-tippy</el-menu-item>
         </el-menu-item-group>
       </el-submenu>
     </el-menu>
