@@ -25,6 +25,15 @@
           <el-menu-item index="/vue-tipppy">element + vue-tippy</el-menu-item>
         </el-menu-item-group>
       </el-submenu>
+      <el-submenu index="3">
+        <template slot="title">
+          <i class="el-icon-menu"></i>
+          <span slot="title">js練習</span>
+        </template>
+        <el-menu-item-group>
+          <el-menu-item index="/setInterval">定時器</el-menu-item>
+        </el-menu-item-group>
+      </el-submenu>
     </el-menu>
   </div>
 </template>
