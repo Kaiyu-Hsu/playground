@@ -18,7 +18,7 @@ const routes = [
   {
     path: '/el-popover',
     name: 'ElPopover',
-    component: () => import('../components/modules/templates/ElPopover.vue'),
+    component: () => import('../components/modules/templates/test/TestPopover.vue'),
   },
   {
     path: '/setInterval',
