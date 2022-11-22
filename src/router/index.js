@@ -14,6 +14,11 @@ const routes = [
     path: '/vue-tipppy',
     name: 'VueTippy',
     component: () => import('../components/modules/templates/VueTippy.vue'),
+  },
+  {
+    path: '/el-popover',
+    name: 'ElPopover',
+    component: () => import('../components/modules/templates/ElPopover.vue'),
   }
 ];
 

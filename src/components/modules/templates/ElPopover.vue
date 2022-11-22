@@ -1,9 +1,10 @@
 <template>
+  <!-- TODO  el-popover -->
   <div class="elpopover-wrapper">
-    <el-popover placement="top-end" trigger="click">
+    <el-popover placement="top" trigger="hover">
       <slot name="content"></slot>
       <el-button slot="reference" type="text">
-        <!-- <i></i> -->
+        <i class="el-icon-more"></i>
       </el-button>
     </el-popover>
   </div>
